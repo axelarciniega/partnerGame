@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="style.css" />
     <title>Gamers🐍</title>
   </head>
-  <body>
-    <section class="row justify-content-center">
+  <body class="container-fluid color-head">
+    <section class="row justify-content-center background">
       <div class="col-6 text-center">
         <h1>Boss Fight 🐍</h1>
       </div>
@@ -27,33 +27,51 @@
         <h1 id="heroGold"></h1>
       </div>
     </section>
-    <section class="row">
+    <section class="row section-color p-3">
       <div class="col-6">
-        <div>Heros</div>
+        <b> <h1>Heros</h1></b>
         <div>
-          <p>Slate Slabrock🪨</p>
-          <p>Health:</p>
+          <b class="text-size">Slate Slabrock🪨</b>
+          <p id="slateHealth">Health:</p>
           <p>Dwarf</p>
           <p>Damage:</p>
+          <img
+            src="https://th.bing.com/th/id/R.5cf033f664144b11743f943df96382eb?rik=tYGYfYjOBx65xQ&pid=ImgRaw&r=0"
+            alt=""
+            class="imgs"
+          />
           <button onclick="heal('Slate Slabrock')" id="dwarfHeal">Heal</button>
           <button onclick="levelUp('Slate Slabrock')">Level Em Up</button>
         </div>
         <div>
-          <p>Flint IronStag🧝‍♂️</p>
-          <p>Health: 50</p>
+          <b class="text-size">Flint IronStag🧝‍♂️</b>
+          <p id="flintHealth">Health: 50</p>
           <p>Elf</p>
           <p>Damage: 5</p>
+          <img
+            class="imgs"
+            src="https://image.winudf.com/v2/image/cnUuU3VwZXJDcmFmdC5BbmltZVNraW5zZm9yTWluZWNyYWZ0X3NjcmVlbl8wXzE1MTA5NDM3MjZfMDA5/screen-0.jpg?fakeurl=1&type=.jpg"
+            alt=""
+          />
           <button onclick="heal('Flint Ironstag')" id="elfHeal">Heal</button>
           <button onclick="levelUp('Flint Ironstag')">Level Em up</button>
         </div>
       </div>
       <div class="col-6">
-        <div onclick="attack(boss)">
-          Boss Man
-          <p>Snake Bossss🐍</p>
-          <p>Health:</p>
+        <div>
+          <b>
+            <h1>Boss Man</h1>
+          </b>
+          <b class="text-size">Snake Bossss🐍</b>
+          <img
+            class="imgs"
+            src="https://th.bing.com/th/id/R.0d897ded933c11a6c015f5b6d5a62ad9?rik=cwJrbfeLo5FmrA&pid=ImgRaw&r=0"
+            alt=""
+          />
+          <p id="bossHealth">Health:</p>
           <p>Damage: 5</p>
           <p id="bossLevel">level: 1</p>
+          <button class="bossManButton" onclick="attack()">HIT</button>
         </div>
       </div>
     </section>

@@ -16,7 +16,6 @@ const heroes = [
 let heroesGold = 0 
 let bossReward = 100
 
-
 const boss = {
     health: 100,
     maxHealth: 100,
@@ -27,7 +26,7 @@ const boss = {
 update()
 
 
-function attack({health}){
+function attack(){
     let totalDamage = 0
     heroes.forEach(hero =>  {
         if(hero.damage && hero.health> 0 ){
@@ -68,6 +67,7 @@ heroes.forEach(hero => {
     if(hero.health == 0){
         window.alert(`${hero.name} got sssssspankedd!`)
     }
+    update()
 })
 }
 
@@ -102,4 +102,7 @@ function killBoss(){
 function update(){
     let bossLevelElem = document.getElementById("bossLevel").innerText = `Level: ${boss.level}`
     let heroGoldElem = document.getElementById('heroGold').innerText = `Gold: ${heroesGold}`
+    let bossHealthElem = document.getElementById('bossHealth').innerText = `Health:${boss.health}`
+    
 }
+
